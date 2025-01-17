@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 
 // This is the manifest for your dapp
-const manifestUrl = 'https://raw.githubusercontent.com/ton-community/tutorials/main/03-wallet/test/public/tonconnect-manifest.json';
+const manifestUrl = 'https://raw.githubusercontent.com/metrognome200/coco-clicker.github.io/refs/heads/main/tonconnect-manifest.json';
 
 const queryClient = new QueryClient();
 
