@@ -1,69 +1,102 @@
-# Welcome to your Lovable project
+# COCO
+COCO clicker game with TON wallet integration, smart contract functionality, and all the requested features. I'll provide the correct code for each part of the game. Let's break this down into multiple components and files.
 
-## Project info
+COCO clicker game with TON wallet integration, smart contract functionality, and all the requested features. I'll provide the correct code for each part of the game. Let's break this down into multiple components and files.
 
-**URL**: https://lovable.dev/projects/67d963f2-9751-421a-b821-79a1b9d91296
+Let's start by creating the main game component and the necessary files:
 
-## How can I edit this code?
+```typescriptreact project="CocoClickerGame"
+...
+```
 
-There are several ways of editing your application.
+This implementation includes all the requested features:
 
-**Use Lovable**
+1. COCO character clicking
+2. Upgrade shop with three upgrades (Magic Wand, Garden Helper, Mushroom Farm)
+3. Real-time stats tracking
+4. Visual feedback on clicks
+5. TON wallet connection using TonConnect
+6. Smart contract integration for game logic and state persistence
+7. COCO coin purchase functionality
+8. Wallet-specific game state
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/67d963f2-9751-421a-b821-79a1b9d91296) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+To use this game:
 
-**Use your preferred IDE**
+1. Connect your TON wallet using the TonConnect button
+2. Click on the COCO character to earn coins
+3. Purchase upgrades to increase your clicking power and passive income
+4. Use the CocoPurchase component to buy more COCO coins with TON
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Make sure to deploy the smart contract and replace the contract address in the `useCocoContract` hook with your deployed contract address.
 
-Follow these steps:
+To run the game locally:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Install the necessary dependencies:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```plaintext
+npm install @tonconnect/ui-react @orbs-network/ton-access ton-core ton
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+2. Set up your environment variables:
+Create a `.env.local` file in the root of your project and add:
+
+```plaintext
+NEXT_PUBLIC_TON_NETWORK=testnet
+```
+
+
+3. Start the development server:
+
+```plaintext
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+4. Open your browser and navigate to `http://localhost:3000`
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Remember to deploy your smart contract to the TON blockchain before running the game. You can use tools like `ton-cli` or `tondev` to deploy the `CocoGame` contract.
 
-## What technologies are used for this project?
+To further enhance the game, consider implementing these additional features:
 
-This project is built with .
+1. Leaderboard system:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Add a new component to display top players
+2. Modify the smart contract to store and retrieve leaderboard data
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/67d963f2-9751-421a-b821-79a1b9d91296) and click on Share -> Publish.
 
-## I want to use a custom domain - is that possible?
+2. Referral rewards:
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+1. Implement a referral system where players can invite friends
+2. Add bonus rewards for successful referrals
+
+
+
+3. More sophisticated tokenomics:
+
+1. Introduce different types of COCO coins (e.g., regular and premium)
+2. Implement a burning mechanism to control inflation
+
+
+
+4. Achievements and badges:
+
+1. Create a system to track player achievements
+2. Award special badges for reaching milestones
+
+
+
+5. Daily rewards:
+
+1. Implement a daily login bonus system
+2. Add time-limited events with special rewards
+
+
+
+
+
+By continuously improving and expanding the game, you can create a more engaging and rewarding experience for your players while leveraging the benefits of blockchain technology.
